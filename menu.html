@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Section</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- REMIX ICON -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0e0ca;
+            font-family: "Inter", sans-serif;
+
+        }
+
+
+        .full-menu {
+            width: 100%;
+            height: 500px;
+            background: #e8c3ad;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .menu-top {
+            letter-spacing: 8px;
+            color: #b86d45;
+            font-size: 13px;
+            margin-bottom: 20px;
+            padding-top: 50px;
+        }
+
+        .full-menu h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 70px;
+            font-weight: 500;
+            line-height: 0.9;
+            color: #2e160f;
+        }
+
+        .full-menu h1 span {
+            color: #c45f2d;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .menu-para {
+            margin-top: 25px;
+            color: #6d5b54;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .menu-btns {
+            display: flex;
+            gap: 18px;
+            margin-top: 45px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .menu-btns button {
+            border: none;
+            background: #fff;
+            padding: 14px 28px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            color: #4a342d;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+            transition: 0.3s;
+        }
+
+        .menu-btns button:hover {
+            transform: translateY(-3px);
+            color: white;
+            background-color: #e4601ef6;
+        }
+
+        /* icon white on hover */
+        .menu-btns button:hover i {
+            color: white;
+        }
+
+
+        .menu-btns i {
+            color: #b45e33;
+            font-size: 20px;
+        }
+
+        /*menu section*/
+        .menu-card {
+            width: 90%;
+            background: #f6efe5;
+            border-radius: 20px;
+
+            margin: 30px auto 10px auto;
+            /* THIS CENTERS THE CARD */
+
+
+            position: relative;
+            overflow: hidden;
+
+            padding: 40px 40px 30px;
+
+        }
+
+        /* LEAVES */
+        .leaf {
+            position: absolute;
+            width: 180px;
+            opacity: 0.9;
+        }
+
+        .leaf.left {
+            top: 0;
+            left: 0;
+            transform: rotate(20deg);
+        }
+
+        /* COFFEE IMAGE */
+        .coffee-top {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            width: 150px;
+            height: 150px;
+
+            border-radius: 50%;
+            overflow: hidden;
+
+            border: 4px solid #d7b99d;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .coffee-top img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* TITLE */
+
+        .top-heading {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .top-heading h1 {
+            font-size: 90px;
+            color: #4d2414;
+            line-height: 0.8;
+
+            font-family: 'Great Vibes', cursive;
+            font-weight: 400;
+        }
+
+        .top-heading h1 span {
+            font-size: 38px;
+            letter-spacing: 10px;
+            font-family: 'Poppins', sans-serif;
+            display: block;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        .top-heading p {
+            margin-top: 12px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #5b3b2d;
+            padding-bottom: 35px;
+            border-bottom: 4px solid green;
+
+        }
+
+        /* MENU SECTION */
+
+        .menu-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0px;
+            margin-top: 20px;
+
+        }
+
+        /* .menu-title {
+            background: #7a4727;
+            color: white;
+
+            padding: 10px 25px;
+
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-align: center;
+
+            margin-bottom: 25px;
+
+            clip-path: polygon(0 0,
+                    100% 0,
+                    95% 100%,
+                    5% 100%);
+        } */
+
+        /* .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            margin-bottom: 22px;
+        }
+
+        .menu-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+
+            border-radius: 50%;
+            border: 3px solid #c7a384;
+        }
+
+        .item-info {
+            flex: 1;
+        }
+
+        .item-info h3 {
+            color: #4e2b1c;
+            font-size: 19px;
+            margin-bottom: 4px;
+        }
+
+        .item-info p {
+            color: #7a6c63;
+            font-size: 13px;
+        }
+
+        .price {
+            color: #4e2b1c;
+            font-size: 18px;
+            font-weight: 600;
+        } */
+
+        /* RIGHT SIDE FOOD */
+
+        .food-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            margin-bottom: 20px;
+        }
+
+        .food-item img {
+            width: 120px;
+            height: 90px;
+
+            object-fit: cover;
+
+            border-radius: 10px;
+        }
+
+        .food-info {
+            flex: 1;
+        }
+
+        .food-info h3 {
+            color: #4e2b1c;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .food-info p {
+            font-size: 13px;
+            color: #7a6c63;
+        }
+
+        .food-price {
+            margin-top: 5px;
+            color: #7a4727;
+            font-weight: 600;
+        }
+
+       /* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+
+    .full-menu {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .full-menu h1 {
+        font-size: 55px;
+    }
+
+    .menu-para {
+        font-size: 16px;
+    }
+
+    .top-heading h1 {
+        font-size: 70px;
+    }
+
+    .top-heading h1 span {
+        font-size: 30px;
+        letter-spacing: 6px;
+    }
+
+    .coffee-top {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .full-menu {
+        padding: 40px 15px;
+    }
+
+    .menu-top {
+        letter-spacing: 4px;
+        font-size: 11px;
+        padding-top: 20px;
+    }
+
+    .full-menu h1 {
+        font-size: 42px;
+        line-height: 1.1;
+    }
+
+    .menu-para {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .menu-btns {
+        gap: 12px;
+        margin-top: 30px;
+    }
+
+    .menu-btns button {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+
+    .menu-card {
+        width: 95%;
+        padding: 25px 15px;
+    }
+
+.coffee-top {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 90px;
+    height: 90px;
+}
+
+.leaf {
+    width: 90px;
+    opacity: 0.8;
+}
+
+    .top-heading h1 {
+        font-size: 55px;
+    }
+
+    .top-heading h1 span {
+        font-size: 24px;
+        letter-spacing: 4px;
+    }
+
+    .top-heading p {
+        font-size: 10px;
+        padding-bottom: 20px;
+    }
+
+    .food-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .food-item img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .food-info h3 {
+        font-size: 17px;
+    }
+
+    .food-info p {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .full-menu h1 {
+        font-size: 34px;
+    }
+
+    .menu-para br {
+        display: none;
+    }
+
+    .menu-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-btns button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* SAME DESKTOP STYLE */
+
+    .coffee-top {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        width: 70px;
+        height: 70px;
+    }
+
+    .leaf {
+        width: 65px;
+        opacity: 0.8;
+    }
+
+    .top-heading h1 {
+        font-size: 42px;
+    }
+
+    .top-heading h1 span {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .top-heading p {
+        font-size: 8px;
+        padding-bottom: 15px;
+    }
+
+    .food-item img {
+        height: 180px;
+    }
+
+    .food-price {
+        font-size: 15px;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="full-menu">
+
+        <p class="menu-top">OUR MENU</p>
+
+        <h1>
+            Crafted with care,<br>
+            <span>served with love.</span>
+        </h1>
+
+        <p class="menu-para">
+            A small, seasonal selection — each item made fresh in our kitchen.
+            Browse <br> below and reserve a table when you're ready.
+        </p>
+
+        <div class="menu-btns">
+
+            <button id="coffee-btn">
+                <i class="fa-solid fa-mug-hot"></i>
+                Coffee
+            </button>
+
+            <button id="snacks-btn">
+                <i class="fa-solid fa-cheese"></i>
+                Snacks
+            </button>
+
+            <button id="tea-btn">
+                <i class="ri-leaf-line"></i>
+                Tea & Juices
+            </button>
+
+            <button id="dessert-btn">
+                <i class="ri-goblet-line"></i>
+                Desserts
+            </button>
+        </div>
+    </div>
+
+    <!--menu section---1  -->
+    <div class="menu-card" id="coffee">
+        <!-- LEAF -->
+        <img class="leaf left" src="coffee--png.png">
+        <!-- COFFEE IMAGE -->
+        <div class="coffee-top">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop">
+        </div>
+        <!-- TITLE -->
+        <div class="top-heading">
+            <h1>
+                Coffee
+            </h1>
+            <p>GOOD COFFEE. GOOD MOOD. GOOD DAY.</p>
+        </div>
+        <!-- MENU -->
+        <div class="menu-wrapper">
+            <!-- FOOD ITEMS -->
+            <div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Espresso Shot</h3>
+                        <p>Strong, bold, and aromatic single shot</p>
+                        <div class="food-price">₹120</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8RXNwcmVzc28lMjBTaG90fGVufDB8fDB8fHww">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Cappuccino</h3>
+                        <p>Frothy milk over rich espresso</p>
+                        <div class="food-price">₹150</div>
+                    </div>
+                    <img
+                        src="https://plus.unsplash.com/premium_photo-1723478443774-19ead8ee7ce2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fENhcHB1Y2Npbm98ZW58MHx8MHx8fDA%3D">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Latte</h3>
+                        <p>Smooth blend of espresso and steamed milk</p>
+                        <div class="food-price">₹160</div>
+                    </div>
+                    <img
+                        src="https://media.istockphoto.com/id/1035061554/photo/a-cup-of-latte-on-wooden-table.jpg?s=1024x1024&w=is&k=20&c=jMK_YD3f8o3Mov8haCY341XgsvXgXM-EebYFYoj9b3E=">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Mocha</h3>
+                        <p>Chocolate-infused coffee delight</p>
+                        <div class="food-price">₹180</div>
+                    </div>
+                    <img src="mocha-coffee-menu.png">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Cold Brew</h3>
+                        <p>Slow-brewed, chilled perfection</p>
+                        <div class="food-price">₹170</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29sZCUyMGJyZXclMjBjb2ZmZWV8ZW58MHx8MHx8fDA%3D">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Caramel Macchiato</h3>
+                        <p>Sweet caramel drizzle over creamy espresso</p>
+                        <div class="food-price">₹190</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1662047102608-a6f2e492411f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2FyYW1lbCUyME1hY2NoaWF0b3xlbnwwfHwwfHx8MA%3D%3D">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Flat White</h3>
+                        <p>Smooth espresso with velvety microfoam</p>
+                        <div class="food-price">₹170</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8RmxhdCUyMFdoaXRlfGVufDB8fDB8fHww">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Irish Coffee</h3>
+                        <p>Espresso blended with cream & a hint of whiskey</p>
+                        <div class="food-price">₹200</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1730190982117-4106871e1f47?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8SXJpc2glMjBDb2ZmZWV8ZW58MHx8MHx8fDA%3D">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--menu section---2  -->
+    <div class="menu-card" id="snacks">
+        <!-- LEAF -->
+        <img class="leaf left" src="snacks--png.png">
+        <!-- COFFEE IMAGE -->
+        <div class="coffee-top">
+            <img
+                src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D">
+        </div>
+        <!-- TITLE -->
+        <div class="top-heading">
+            <h1>
+                Snacks
+            </h1>
+            <p>SMALL PLATES. BIG SMILES. GREAT VIBES.</p>
+        </div>
+        <!-- MENU -->
+        <div class="menu-wrapper">
+            <!-- FOOD ITEMS -->
+            <div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Grilled Sandwich</h3>
+                        <p>Fresh veggies & cheese</p>
+                        <div class="food-price">₹180</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=800&auto=format&fit=crop">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Cheese Balls</h3>
+                        <p>Crispy snack bites</p>
+                        <div class="food-price">₹150</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=800&auto=format&fit=crop">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Nachos</h3>
+                        <p>Crunchy chips with sauce</p>
+                        <div class="food-price">₹160</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?q=80&w=800&auto=format&fit=crop">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>French Fries</h3>
+                        <p>Crispy potato fries</p>
+                        <div class="food-price">₹120</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1576107232684-1279f390859f?q=80&w=800&auto=format&fit=crop">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Paneer Wrap</h3>
+                        <p>Spiced paneer with veggies in soft tortilla</p>
+                        <div class="food-price">₹160</div>
+                    </div>
+                    <img
+                        src="https://media.istockphoto.com/id/1352474720/photo/fresh-paneer-roll-with-fresh-tomatos-salad-cheese-and-onions-isolated-on-bright-blue.webp?a=1&b=1&s=612x612&w=0&k=20&c=HHeBNencFEcT2ZplHH2SJ-5us8L-m8GYHmfMhoMuzaw=">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Veg Burger</h3>
+                        <p>Juicy patty with lettuce & special sauce</p>
+                        <div class="food-price">₹170</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fFZlZyUyMEJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Garlic Breadsticks</h3>
+                        <p>Warm, buttery sticks with garlic & herbs</p>
+                        <div class="food-price">₹140</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1754075501044-0adcbaccafc4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEdhcmxpYyUyMEJyZWFkc3RpY2tzfGVufDB8fDB8fHww">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Veg Club Sandwich</h3>
+                        <p>Triple-layered sandwich with veggies & cheese</p>
+                        <div class="food-price">₹190</div>
+                    </div>
+                    <img
+                        src="https://media.istockphoto.com/id/1147321264/photo/sandwich-with-cheese-tomato-cucumber-sausage-and-salad-on-wooden-background-horizontal.webp?a=1&b=1&s=612x612&w=0&k=20&c=MjoadnFpHzIaLeUt00vBepQO1xAC0Cuye7Xuclgyd4Y=">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--menu section---3  -->
+    <div class="menu-card" id="tea-juice">
+        <!-- LEAF -->
+        <img class="leaf left" src="tea-juice-png.png">
+        <!-- COFFEE IMAGE -->
+        <div class="coffee-top">
+            <img
+                src="https://images.unsplash.com/photo-1481671703460-040cb8a2d909?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGRyaW5rfGVufDB8fDB8fHww">
+        </div>
+        <!-- TITLE -->
+        <div class="top-heading">
+            <h1>
+                Tea & Juices
+            </h1>
+            <p>SIP HEALTHY. STAY HAPPY. FEEL FRESH.</p>
+        </div>
+        <!-- MENU -->
+        <div class="menu-wrapper">
+            <!-- FOOD ITEMS -->
+            <div>
+
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Masala Chai</h3>
+                        <p>Spiced Indian tea with milk</p>
+                        <div class="food-price">₹90</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1636920272028-c27f1ae474c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8TWFzYWxhJTIwQ2hhaXxlbnwwfHwwfHx8MA%3D%3D">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Green Tea</h3>
+                        <p>Light, soothing & healthy</p>
+                        <div class="food-price">₹100</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8R3JlZW4lMjBUZWF8ZW58MHx8MHx8fDA%3D">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Lemon Iced Tea</h3>
+                        <p>Refreshing chilled tea with lemon</p>
+                        <div class="food-price">₹120</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TGVtb24lMjBJY2VkJTIwVGVhfGVufDB8fDB8fHww">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Fresh Orange Juice</h3>
+                        <p>Pure, tangy & vitamin-rich</p>
+                        <div class="food-price">₹130</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1613478223719-2ab802602423?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8RnJlc2glMjBPcmFuZ2UlMjBKdWljZXxlbnwwfHwwfHx8MA%3D%3D">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Mixed Fruit Juice</h3>
+                        <p>Blend of seasonal fruits</p>
+                        <div class="food-price">₹140</div>
+                    </div>
+                    <img
+                        src="https://plus.unsplash.com/premium_photo-1663126827264-409d695e0be7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TWl4ZWQlMjBGcnVpdCUyMEp1aWNlfGVufDB8fDB8fHww">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Watermelon Cooler</h3>
+                        <p>Sweet, chilled summer refresher</p>
+                        <div class="food-price">₹150</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1589448700841-3c194a095a0e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8V2F0ZXJtZWxvbiUyMENvb2xlcnxlbnwwfHwwfHx8MA%3D%3D">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Herbal Infusion</h3>
+                        <p>Calming blend of chamomile & herbs</p>
+                        <div class="food-price">₹110</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1648455321715-e8ed86188c0e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8SGVyYmFsJTIwSW5mdXNpb258ZW58MHx8MHx8fDA%3D">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Apple Juice</h3>
+                        <p>Freshly pressed, naturally sweet</p>
+                        <div class="food-price">₹130</div>
+                    </div>
+                    <img
+                        src="https://media.istockphoto.com/id/503096289/photo/apple-juice-pouring-from-red-apples-into-a-glass.webp?a=1&b=1&s=612x612&w=0&k=20&c=htSwdrNI6N8H8kC413wHmb12Vtp8j2gMhWFI3kkndYo=">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--menu section---4  -->
+    <div class="menu-card" id="desserts">
+        <!-- LEAF -->
+        <img class="leaf left" src="desserts--png.png">
+        <!-- COFFEE IMAGE -->
+        <div class="coffee-top">
+            <img
+                src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGVzc2VydHxlbnwwfHwwfHx8MA%3D%3D">
+        </div>
+        <!-- TITLE -->
+        <div class="top-heading">
+            <h1>
+                Desserts
+            </h1>
+            <p>SWEET TREATS. SWEETER MOMENTS. SWEETEST MEMORIES.</p>
+        </div>
+        <!-- MENU -->
+        <div class="menu-wrapper">
+            <!-- FOOD ITEMS -->
+            <div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Chocolate Cake</h3>
+                        <p>Rich, moist cake with fudge frosting</p>
+                        <div class="food-price">₹180</div>
+                    </div>
+                    <img
+                        src="https://plus.unsplash.com/premium_photo-1715015439764-1e8d37d5c6c9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2hvY29sYXRlJTIwY2FrZSUyMHNsaWNlfGVufDB8fDB8fHww">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Blueberry Muffin</h3>
+                        <p>Soft muffin packed with blueberries</p>
+                        <div class="food-price">₹150</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1722251172903-cc8774501df7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Qmx1ZWJlcnJ5JTIwTXVmZmlufGVufDB8fDB8fHww">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Cheesecake Slice</h3>
+                        <p>Creamy cheesecake with buttery crust</p>
+                        <div class="food-price">₹200</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2hlZXNlY2FrZSUyMFNsaWNlfGVufDB8fDB8fHww">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Brownie</h3>
+                        <p>Gooey chocolate square with nuts</p>
+                        <div class="food-price">₹160</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1570145820259-b5b80c5c8bd6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fEJyb3duaWV8ZW58MHx8MHx8fDA%3D">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Cookies</h3>
+                        <p>Freshly baked assorted cookies</p>
+                        <div class="food-price">₹120</div>
+                    </div>
+                    <img
+                        src="https://plus.unsplash.com/premium_photo-1670895801135-858a7d167ea4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Q29va2llc3xlbnwwfHwwfHx8MA%3D%3D">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Chocolate Ice Cream</h3>
+                        <p>Rich, creamy scoop with cocoa indulgence</p>
+                        <div class="food-price">₹150</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1597648152428-f883fbc9c873?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fENob2NvbGF0ZSUyMEljZSUyMENyZWFtfGVufDB8fDB8fHww">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Vanilla Scoop Sundae</h3>
+                        <p>Classic vanilla topped with nuts & syrup</p>
+                        <div class="food-price">₹160</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1701144684031-ece666fe1f8d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fFZhbmlsbGElMjBTY29vcCUyMFN1bmRhZXxlbnwwfHwwfHx8MA%3D%3D">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Donut</h3>
+                        <p>Classic ring donut with glaze</p>
+                        <div class="food-price">₹130</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RG9udXR8ZW58MHx8MHx8fDA%3D">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Tiramisu</h3>
+                        <p>Classic Italian dessert with coffee & cream layers</p>
+                        <div class="food-price">₹220</div>
+                    </div>
+                    <img
+                        src="https://plus.unsplash.com/premium_photo-1695028378225-97fbe39df62a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VGlyYW1pc3V8ZW58MHx8MHx8fDA%3D">
+                </div>
+                <div class="food-item">
+                    <div class="food-info">
+                        <h3>Red Velvet Pastry</h3>
+                        <p>Soft red velvet sponge with cream cheese frosting</p>
+                        <div class="food-price">₹200</div>
+                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1714386148315-2f0e3eebcd5a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8UmVkJTIwVmVsdmV0JTIwUGFzdHJ5fGVufDB8fDB8fHww">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        let coffee = document.getElementById("coffee-btn");
+        coffee.addEventListener("click", function () {
+            document.getElementById("coffee").scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+        let snack = document.getElementById("snacks-btn");
+        snack.addEventListener("click", function () {
+            document.getElementById("snacks").scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+        let teajuice = document.getElementById("tea-btn");
+        teajuice.addEventListener("click", function () {
+            document.getElementById("tea-juice").scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+        let dessert = document.getElementById("dessert-btn");
+        dessert.addEventListener("click", function () {
+            document.getElementById("desserts").scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

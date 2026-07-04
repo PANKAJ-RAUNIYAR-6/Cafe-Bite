@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserve a table Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Georgia", serif;
+        }
+
+        body {
+            background: #f5f0e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #4b4037;
+        }
+
+        .reservation-box {
+            width: 100%;
+            max-width: 420px;
+            background: #f5f0e8;
+        }
+
+        .small-title {
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: #b1785a;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .desc {
+            font-size: 14px;
+            color: #7a6f66;
+            margin-bottom: 40px;
+            line-height: 1.5;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-group {
+            margin-bottom: 28px;
+        }
+
+        label {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: #9a8d83;
+            text-transform: uppercase;
+            font-family: Arial, sans-serif;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #d8cec5;
+            background: transparent;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #4b4037;
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        .row {
+            display: flex;
+            gap: 18px;
+        }
+
+        .row .form-group {
+            flex: 1;
+        }
+
+        .btn {
+            width: 100%;
+            background: #b95726;
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 40px;
+            font-size: 13px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+            font-family: Arial, sans-serif;
+        }
+
+        .btn:hover {
+            background: #9e471b;
+        }
+
+        .footer-text {
+            text-align: center;
+            font-size: 12px;
+            color: #8b8178;
+            margin-top: 18px;
+            font-family: Arial, sans-serif;
+        }
+
+        @media(max-width:600px) {
+            h1 {
+                font-size: 38px;
+            }
+
+            .row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="reservation-box">
+
+        <div class="small-title">BOOK A TABLE</div>
+
+        <h1>Reserve.</h1>
+
+        <p class="desc">
+            Tables seat up to 6. For larger parties, please email us directly.
+        </p>
+
+        <form>
+
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" placeholder="Your name" required>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Time</label>
+                    <select>
+                        <option>09:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>01:00 PM</option>
+                        <option>03:00 PM</option>
+                        <option>05:00 PM</option>
+                        <option>08:00 PM</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label>Guests</label>
+                    <select>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" placeholder="Optional">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label>Notes</label>
+                <textarea placeholder="Window seat, dietary needs, etc." required></textarea>
+            </div>
+
+            <button class="btn">REQUEST RESERVATION</button>
+
+            <div class="footer-text">
+                We'll confirm by email within 2 hours during opening times.
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

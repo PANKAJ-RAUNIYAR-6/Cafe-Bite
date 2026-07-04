@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firts project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!--nav bar-->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="circle">C</div>
+            <span>CafeBite</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="file:///E:/WEB%20SITE%20FRONTEND/index.html">Home</a></li>
+            <li><a href="#nav-abt">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#abt-gallery">Gallery</a></li>
+        </ul>
+        <button class="login" onclick="window.location='reserve-form.html'">
+            <a href="reserve-form.html">RESERVE A TABLE</a>
+        </button>
+
+        <div class="menu-toggle">&#9776;</div>
+    </nav>
+    <main>
+        <!--hero image-->
+        <section class="hero">
+            <div class="hero-content">
+                <p><i class="fa-solid fa-minus line"></i>START YOUR DAY WITH <span><i
+                            class="fa-brands fa-java"></i>.</span></p>
+                <h1>
+                    Good Coffee <br> Great
+                    <span>Vibes</span>
+                </h1>
+                <p class="para">
+                    Step into Cafe Bite,where every cup is <br>crafted with passion and served with warmth.
+                </p>
+                    <a href="menu.html" class="exp-btn">
+                        Explore Menu<span><i class="fa-solid fa-arrow-right"></i></span></a>
+            </div>
+            <div class="hero-img">
+                <img src="hero.png" alt="coffee image">
+            </div>
+        </section>
+
+        <!--FEATURES-->
+        <div class="feature">
+            <div class="coffee">
+                <div class="cupicon">
+                    <img src="cofficon.png">
+                </div>
+                <div class="coffeedata">
+                    <h3>Quality Coffee</h3>
+                    <p>We use premium beans sourced from the best coffee regions.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="coffee">
+                <div class="cupicon">
+                    <img src="treaticon.png">
+                </div>
+                <div class="coffeedata">
+                    <h3>Delicious Treats</h3>
+                    <p>Pair your coffee with our handmade pastries and desserts.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="coffee">
+                <div class="cupicon">
+                    <img src="chairicons.png">
+                </div>
+                <div class="coffeedata">
+                    <h3>Cozy Ambience</h3>
+                    <p>A warm and welcoming space to relax, work, or catch up with friends.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--about us or favourite-->
+        <hr>
+        <div class="webdetail">
+            <!--about-us-->
+            <div class="about-us" id="nav-abt">
+                <div class="about">
+                    <p><i class="fa-solid fa-minus line"></i>ABOUT US
+                    <h1>
+                        More Than <br>Just Coffee
+                    </h1>
+                    <p class="abtpara">
+                        Cafe Bite is a place where moments
+                        become memories. We're passionate
+                        about coffee, community, and creating
+                        experiences you'll love.
+                    </p>
+                    <button class="abt" id="learn-more">
+                        LEARN MORE<span><i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                </div>
+
+                <img src="gall-2.jpeg">
+
+            </div>
+            <!--our signature-->
+            <div class="signature">
+                <div class="signMenu">
+                    <div class="signheader">
+                        <p><i class="fa-solid fa-minus line"></i>OUR SIGNATURES
+                        <h1>
+                            Customer Favorites
+                        </h1>
+                    </div>
+                    <div class="signimg">
+                        <div class="signcard1">
+                            <img src="coffeeFav.png">
+                            <p>Caramel Latte</p>
+                            <h5>$4.50</h5>
+                        </div>
+                        <div class="signcard1">
+                            <img src="cakeFav.png">
+                            <p>Chocolate Cake</p>
+                            <h5>$5.30</h5>
+                        </div>
+                        <div class="signcard1">
+                            <img src="dringFav.png">
+                            <p>Iced Mocha</p>
+                            <h5>$4.80</h5>
+                        </div>
+
+                        <div class="signcard1 cardhide">
+                            <img src="sandwichFav.png">
+                            <p>Veg Sandwich</p>
+                            <h5>$9.50</h5>
+                        </div>
+                    </div>
+                    <a href="menu.html" class="viewmenu">
+                        VIEW FULL MENU
+                        <span><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!--REVIEWS -->
+        <div class="reviews-info">
+            <h1>Stories From Our Table</h1>
+            <div class="reviews">
+                <div class="viewer1">
+                    <img src="review-1.jpeg">
+
+                    <div class="viewer-info">
+                        <h3>Aarav Sharma</h3>
+                        <h4>
+                            <i class="fa-solid fa-star"></i> <!--full fill star-->
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i> <!--half fill-->
+                        </h4>
+                        <p>
+                            CafeBite has such a cozy atmosphere. The coffee tasted amazing, and the staff was very
+                            friendly. A perfect place to relax or work!
+                        </p>
+                    </div>
+                </div>
+                <div class="viewer1">
+                    <img src="review-2.jpeg">
+
+                    <div class="viewer-info">
+                        <h3>Priya Verma</h3>
+                        <h4>
+                            <i class="fa-solid fa-star"></i> <!--full fill star-->
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i> <!--not fill-->
+                        </h4>
+                        <p>
+                            I loved the aesthetic vibe and beautiful latte art. The evening lights and music made the
+                            experience even more special. Highly recommended!
+                        </p>
+                    </div>
+                </div>
+                <div class="viewer1">
+                    <img src="review-3.jpeg">
+
+                    <div class="viewer-info">
+                        <h3>Rohan Mehta</h3>
+                        <h4>
+                            <i class="fa-solid fa-star"></i> <!--full fill star-->
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i> <!--half fill-->
+                            <i class="fa-regular fa-star"></i> <!--not fill-->
+
+                        </h4>
+                        <p>
+                            The best cappuccino I’ve had in a long time! I really enjoyed the outdoor seating and
+                            peaceful atmosphere. Definitely coming back again.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--GALLERY SECTION-->
+        <section class="cafe-gallery" id="abt-gallery">
+            <div class="gallery-header">
+                <p class="subheading">THE ROOM</p>
+                <h2>A Look Around.</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <img src="gall-7.jpeg" class="item item-small" alt="Barista pouring coffee">
+                <img src="gall-5.jpeg" class="item item-tall" alt="Croissants on window">
+
+                <img src="gall-3.jpeg" class="item item-small" alt="Coffee beans pouring">
+
+                <img src="gall-1.jpeg" class="item item-tall up" alt="Customers in cafe">
+                <img src="gall-6.jpeg" class="item item-small" alt="Latte art top view">
+
+                <img src="gall-4.jpeg" class="item item-small" alt="Stacked pastries">
+            </div>
+        </section>
+
+        <!--LOCATION + TIMING-->
+        <div class="find-us">
+            <div class="location" id="location">
+                <div class="location-info">
+                    <p class="subheading lct-find"><i class="fa-solid fa-minus line"></i>Find Us</p>
+                    <h1>Come On In.</h1>
+
+                    <div class="address">
+                        <i class="fa-solid fa-location-dot"></i>ADDRESS
+                        <p>shop- 22 mb road<br>near ganesh hospital,<br>andheri mumbai, 401503</p>
+
+                    </div>
+
+                    <div class="address">
+                        <i class="fa-solid fa-phone"></i>CONTACT
+                        <p>+91 77094 47731<br>pankajrauniyar7@gmail.com</p>
+
+                    </div>
+
+                    <div class="address">
+                        <i class="fa-regular fa-clock"></i>HOURS
+                        <p class="timing">Monday - Friday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7:00am - 20:00pm<br>
+                            Saturday
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            8:00am - 21:00pm<br>
+                            Sunday
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            8:00am - 18:00pm</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--map-->
+            <div class="map">
+                <div class="map-map">
+                    <iframe
+                        src="https://maps.google.com/maps?q=22%20Rue%20des%20Lilas%20Paris%20France&z=15&output=embed"
+                        loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!--footer-->
+    <footer>
+        <div class="footer-data">
+            <div class="foot-information">
+                <div class="foot-info">
+                    CafeBite
+                    <p>A Neighborhod cafe rossting <br> honest coffee</p>
+                </div>
+                <div class="foot-visit">
+                    VISIT
+                    <p>shop- 22 mb road<br>andheri mumbai, 401503<br>Open daily 7am-8pm</p>
+                </div>
+                <div class="contact">
+                    CONTACT
+                    <p>+91 77094 47731<br>pankajrauniyar7@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="foot">
+                © 2026 CafeBite Coffee Shop
+                <button class="reserve-btn" onclick="window.location='reserve-form.html'">
+                    <!--the onc;lick use if we clock on bg then also open form-->
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <a href="reserve-form.html">RESERVE A TABLE</a>
+                </button>
+
+            </div>
+
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

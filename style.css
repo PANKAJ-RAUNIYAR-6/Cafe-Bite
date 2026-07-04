@@ -1,0 +1,1068 @@
+   *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+    
+}
+
+html,body{
+   background-color: #faf7f2; 
+   width: 100%;
+}
+
+/* NAVBAR */
+.navbar{
+    width: 100%;
+    top:0;
+    z-index: 1000;
+    position: fixed;
+    font-family: 'Poppins',sans-serif;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height: 80px;
+    padding:0px 60px;
+    background-color: rgba(245, 240, 234,0.9);
+}
+
+/* LOGO */
+.logo{
+    display:flex;
+    align-items:center;
+    font-weight:bold;
+    font-size:22px;
+}
+
+.circle{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#5a3d2b;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    margin-right:8px;
+}
+
+/* NAV LINKS */
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:40px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    font-size: 22px;
+    font-weight: 500;
+    color: #2b2b2b;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#9d5b32;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: #4a2c1a;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;   /*space between text or underline*/
+}
+
+/* LOGIN */
+.login{
+    width: 180px;
+    height: 42px;
+    background-color: #764b30;
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: 500;
+    /* font-size:14px; */
+    letter-spacing: 0.5px;
+    cursor:pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+.login a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.login:hover{
+    background-color: #936955;
+}
+
+/* HAMBURGER */
+.menu-toggle{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+    
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background: rgba(255, 255, 255,0.7);
+        flex-direction:column; /*used to a link in a line*/
+        align-items:center;
+        display:none;
+        height: 280px;
+        padding-top: 5px;
+        gap:0;
+
+    }
+    .nav-links li{
+        width: 100%;
+        text-align: center;
+        height: 50px;
+        padding: 12px 0;   /* control spacing */
+        border-bottom: 2px solid rgba(162, 95, 27, 0.7);
+      
+    }
+    .nav-links li:hover{
+        text-decoration: underline;
+        text-decoration-color: #a25f1b;
+        text-underline-offset: 7px;
+        text-decoration-thickness: 2px;
+        border-bottom: 2px solid rgba(162, 95, 27);
+        background-color: rgba(225, 225, 217, 0.584);
+    }
+    .nav-links li a{
+        color: rgb(185, 65, 65);
+    }
+
+ 
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-toggle{
+        display:block; 
+        font-size: 30px;
+        font-weight: 600;
+        margin-left: 10px;
+    }
+    .circle{
+        margin-left: -15px;
+    }
+
+    .login{
+        display:none;
+
+    }
+}
+
+
+/*hero section*/
+.hero-content{
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 80px;
+}
+.hero-content p{
+    color: #9d5b32;
+    font-size: clamp(10px,2vw,15px);
+    font-weight: 300;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+.line{
+    padding-right: 3px;
+    font-weight: 200;
+}
+
+.hero-content p span i{
+    font-weight: 700;
+    padding-left: 5px;
+    color: #9c6834;
+    font-size: clamp(10px,2vw,22px);
+}
+.hero-content h1{
+    font-size: clamp(30px, 5vw, 64px); /*minimum size (mobile),,5vw → responsive scaling,,64px → max size (desktop)*/
+    font-weight: 500;
+    line-height: 1.2;
+    color: #000000;
+}
+
+.hero-content h1 span{
+    color: #a25f1b;
+}
+
+.hero-content .para{
+    margin-top: 20px;
+    font-size: clamp(15px,2vw,16px); /*clamp(MIN, PREFERRED, MAX)*/
+    font-weight: 400;
+    color: #422a2a;
+    line-height: 1.5;
+}
+
+.hero-img img{
+    width: 100%;
+    height: 620px;
+    display: block;
+}
+
+.exp-btn{
+    margin-top: 30px;
+
+    width: 180px;
+    height: 50px;
+
+    background-color: #5a3e2b;
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+    border: none;
+}
+
+.exp-btn i{
+    padding-left: 5px;
+}
+
+.exp-btn:hover{
+    background-color: #3e2a1f;
+}
+
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+   .hero{
+    flex-direction: column;
+   }
+
+  .hero-img img {
+    width: 100%;
+    max-height: 420px;         /* fixed visible area */
+    content: url("herosmall.png");
+    object-fit: cover;
+  }
+  .hero-content{
+    margin-left: 7vw;
+    margin-top: 110px;
+  }
+
+  .exp-btn{
+    width: 33vw;
+    height: 10vw;
+    font-size: clamp(14px,2.2vw,20px);
+  }
+}
+
+/*FEATURES*/
+.feature{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.coffee{
+    display: flex;
+}
+.cupicon{
+    display: flex;
+    align-items: center;
+}
+.cupicon img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+}
+.coffeedata{
+    margin-left: 15px;
+    width: 170px;
+    line-height: 1.5;
+}
+.coffeedata h3{
+    letter-spacing: 0.7px;
+}
+.coffeedata p{
+    font-size: 15px;
+}
+
+/*fature responsive*/
+@media (max-width: 768px) {
+    .feature{
+        flex-direction: column;     /* stack items */
+        align-items: center;        /* center everything */
+        gap: 20px;                  /* spacing between items */
+    }
+
+    .coffee{
+        flex-direction: row;        /* keep icon + text side by side */
+        align-items: center;
+        width: 90%;                 /* better fit on mobile */
+    }
+
+    .coffeedata{
+        width: 100%;                /* allow text to adjust */
+    }
+
+
+    hr{
+        width: 80%;                 /* make divider smaller */
+    }
+}
+
+hr{
+    opacity: 0.5;
+}
+
+
+/* ABOUT US */
+.webdetail {
+    display: flex;
+    justify-content: start;
+    padding: 0;
+}
+
+.about-us {
+    background-color: #422201;
+    width: min(100%, 55%); /* desktop pe max 1200px, mobile pe 90% */
+    min-height: 400px;
+    /* margin-bottom: 30px; */
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 4vw, 60px);
+    padding: clamp(20px, 4vw, 50px);
+}
+
+.about {
+    flex: 1; /* remaining space lega */
+    width: auto;
+    margin: 0;
+}
+
+.about p i {
+    margin-right: 5px;
+}
+
+.about p {
+    color: rgb(242, 238, 238);
+    margin-bottom: clamp(12px, 2vw, 20px);
+    font-weight: 600;
+    font-size: clamp(12px, 1.2vw, 15px);
+    letter-spacing: 1px;
+}
+
+.about h1 {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    letter-spacing: 1px;
+    margin-bottom: clamp(12px, 2vw, 20px);
+    font-size: clamp(24px, 3.5vw, 56px);
+    line-height: 1.2;
+}
+
+.about .abtpara {
+    color: rgb(250, 243, 243);
+    margin-bottom: clamp(16px, 2.5vw, 20px);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1.1px;
+    font-size: clamp(11px, 1.1vw, 12px);
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+.about-us .abt {
+    width: clamp(140px, 18vw, 160px);
+    height: clamp(40px, 5vw, 46px);
+    font-size: clamp(12px, 1.3vw, 14px);
+    border-radius: 10px;
+    color: maroon;
+    font-weight: 600;
+    background-color: cornsilk;
+    border: none;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.about-us .abt i {
+    margin-left: 10px;
+}
+
+.about-us img {
+    flex-shrink: 0;
+    width: clamp(180px, 30vw, 300px);
+    height: clamp(180px, 30vw, 300px);
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 10px 4px 10px #422201;  
+    margin: 0;
+}
+
+/* Tablet: 1024px */
+@media (max-width: 1024px) {
+    .about-us {
+        flex-direction: row;
+        gap: 30px;
+        width: 100%;
+    }
+}
+
+/* Mobile: 768px */
+@media (max-width: 768px) {
+    .about-us {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .about {
+        order: -2; /* text uper aayega */
+    }
+
+    .about-us img {
+        order: -1; /* image upar aayegi */
+        width: clamp(220px, 60vw, 300px);
+        height: clamp(220px, 60vw, 300px);
+        margin-bottom: 20px;
+    }
+
+    .about h1 br {
+        display: none; /* mobile pe break hata do */
+    }
+}
+
+/* Small mobile: 480px */
+@media (max-width: 480px) {
+    .webdetail {
+        padding: 0px 0px;
+    }
+    .about-us {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+
+/* Signature Section */
+.signature {
+    flex: 1;  /* About Us ke baad bacha hua space lega */
+    padding: clamp(20px, 4vw, 50px);
+    background-color: #faf7f2;
+    border-radius: 12px;
+    margin-left: 10px; /* About Us aur Signature ke beech gap */
+}
+
+.signheader p {
+    color: #8b6f47;
+    font-weight: 600;
+    font-size: clamp(12px, 1.2vw, 15px);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.signheader h1 {
+    font-family: 'Playfair Display', serif;
+    color: #2d2d2d;
+    font-size: clamp(28px, 3.5vw, 40px);
+    margin-bottom: clamp(20px, 3vw, 35px);
+}
+
+.signimg {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Desktop pe 3 cards in row */
+    gap: clamp(15px, 2vw, 25px);
+    margin-bottom: clamp(20px, 3vw, 35px);
+}
+
+.signcard1 {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    padding-bottom: 15px;
+}
+.cardhide{
+    display: none;
+}
+.signcard1 img {
+    width: 100%;
+    height: clamp(120px, 15vw, 180px);
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.signcard1 p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: clamp(13px, 1.4vw, 15px);
+    color: #2d2d2d;
+    margin-top: 12px;
+}
+
+.signcard1 h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: clamp(12px, 1.2vw, 14px);
+    color: #69512e;
+    margin-top: 5px;
+}
+
+.viewmenu {
+    width: clamp(160px, 20vw, 200px);
+    height: clamp(42px, 5vw, 48px);
+
+    font-size: clamp(12px, 1.3vw, 14px);
+
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+
+    background-color: #422201;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    text-decoration: none;
+    border: none;
+}
+
+.viewmenu:hover{
+    background-color: #6b431b;
+}
+
+/* Tablet + Mobile: 1024px se neeche */
+@media (max-width: 1024px) {
+
+    .webdetail {
+        flex-direction: column; /* About + Signature ek ke neeche ek */
+        gap: 0px;
+    }
+    
+    .signature {
+        margin-left: 0; /* Gap hata do */
+        width: 100%;
+    }
+    
+    .signimg {
+        grid-template-columns: repeat(3, 1fr); /* Tablet pe 2 cards */
+    }
+
+}
+
+/* Mobile: 600px se neeche */
+@media (max-width: 600px) {
+    .cardhide{
+        display: block;
+    }
+    .signimg {
+        grid-template-columns: repeat(2,1fr); /* Mobile pe 1 card per row */
+    }
+    
+    .signature {
+        padding: 20px 20px;
+    }
+}
+
+
+/*REVIEWS-----*/
+.reviews-info{
+    display: block;
+    background-color: #f9f9f9; /* yellow se soft grey better lagta hai reviews me */
+    align-items: center;
+    text-align: center;
+}
+
+.reviews-info h1{
+    color: #8b6f47;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(25px,3.5vw,41px);
+    text-decoration: underline;
+    text-decoration-thickness: 1.2px;
+    text-underline-offset: 7px;
+    padding-top: 40px;
+
+}
+
+.reviews{
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: stretch;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.viewer1{
+    background-color: #fff; /* card white hoga */
+    /* width: 400px; */
+     width: min(400px,100%);
+    min-height: 220px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    border-radius: 12px; /* rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* soft shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.viewer1:hover{
+    transform: translateY(-4px); /* hover effect */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.viewer1 img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* round profile pic */
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+
+
+.viewer1 h3{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: #222;
+    border-bottom: 1px solid rgb(0,0, 0,0.5);
+    padding-bottom: 4px;
+}
+
+.viewer1 h4{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+    color: #f5a623; /* star color yellow */
+    
+}
+
+.viewer1 p{
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    margin-left: -50px;
+    color: #555;
+}
+
+/* Tablet: 1024px tak 2 cards per row */
+@media(max-width: 1024px){
+    .viewer1{
+        width: calc(50% - 15px);
+    }
+}
+
+/* Mobile: 768px tak 1 card per row, 90% width */
+@media(max-width: 768px){
+    .reviews{
+        gap: 20px;
+        padding: 30px 15px;
+    }
+    .viewer1{
+        width: 90%;
+        min-height: auto;
+    }
+
+}
+
+/*--GALLERY SECTION--*/
+.cafe-gallery {
+  background: #faf7f2;
+  padding: 35px 40px;
+}
+
+.gallery-header {
+  margin-bottom: 40px;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+
+}
+
+.subheading {
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #a67c52;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+
+}
+
+.gallery-header h2 {
+  font-size: clamp(28px,3.5vw,45px);
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 16px;
+  width: 70%;
+  margin-bottom: 20px;
+  margin-left: 15%;
+}
+
+.gallery-grid img{   /*zom in image*/
+    transition: transform 0.4s ease; /* smooth zoom */
+    overflow: hidden;  /*it help to stop increae image size after hover on img*/
+
+}
+
+.gallery-grid img:hover{
+    transform: scale(1.02); /* zoom effect */
+
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.item-small {
+  grid-row: span 1;
+
+}
+
+.item-tall {
+  grid-row: span 2;
+  margin-top: 20px;
+}
+/*use to give last tall image - margin top*/
+.up{
+    margin-top: -20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: 250px;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+  .item-tall{
+    margin: 0;
+    padding: 0;
+    grid-row: span 2;
+
+  }
+   .item-small {
+    grid-row: span 1;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+}
+
+/*loaction + timing*/
+.find-us{
+    background-color: #2A0F08;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    /* margin: 0 5% 2% 5%; */
+
+}
+
+.lct-find{
+    color: whitesmoke;
+    letter-spacing: 2px;
+}
+
+.location{
+    width: 50%;
+    height: 100%;
+    display: block;
+    
+}
+.location-info{
+    height: 60%;
+    margin-left: 20%;
+    padding-top: 6%;
+    
+}
+.location-info h1{
+    padding-top: 7px;
+    font-family: 'Playfair Display', serif;
+    color: #F4E7D8;
+
+}
+
+.location-info .address{
+    margin-top: 20px;
+    line-height: 1.4;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #8f6e5f;
+    
+}
+
+.location-info .address i{
+    margin-right: 10px;
+    color: transparent;
+    -webkit-text-stroke: 1.7px  #C46A3A; /*give icon outer line color*/
+    font-size: 17px;
+    
+}
+
+
+.location-info .address p{
+    margin-left: 22px;
+    color: #e0d0c7;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.location-info .address .timing{
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    line-height: 2;
+    text-decoration-thickness: 1px;
+    text-decoration-color:  #5A3427;
+}
+
+.map{
+    width: 50%;
+    height: 100%;
+} 
+
+.map-map{
+    width: 80%;
+    height: 85%;
+    margin: 5% 5% 5% 5%;
+}
+
+.map-map iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+    
+}
+
+@media(max-width: 768px){
+    .find-us{
+        flex-direction: column;   /* location + map ek ke neeche ek */
+        height: auto;             /* 500px fixed height hatao, content ke hisab se badhe */
+    }
+
+    .location, .map {
+        width: 100%;              /* dono full width le */
+    }
+
+    .location-info{
+        margin-left: 5%;          /* desktop ka 20% mobile pe zyada space le raha tha */
+        padding: 30px 5%;         /* top-bottom padding balance */
+        height: auto;
+        order: 2;                 /* map upar, info neeche */
+    }
+
+    .map-map{
+        width: 90%;               /* side me extra margin kam */
+        height: 300px;            /* mobile pe height control, warna map bahut bada ho jayega */
+        margin: 20px auto;        /* center me la do */
+    }
+}
+
+/*FOOTER INFO*/
+.footer-data{
+    width: 100%;
+    height: 270px;
+    background-color: #f8eee1;
+    display: block;
+
+}
+
+.foot-information{
+    display: flex;
+    padding-top: 60px;
+    text-align: start;
+    justify-content: center;
+    gap: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.foot-info{
+    color: #4B3A2F;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    letter-spacing: 0.7px;
+    height: 100px;
+}
+.foot-info p{
+    margin-top: 10px;
+    line-height: 1.3;
+    color: #6B5B4D;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.foot-visit{
+    color: #4B3A2F;
+    font-weight: 400;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    font-size: 18px;
+
+}
+.foot-visit p{
+    margin-top: 10px;
+    line-height: 1.3;
+    color: #6B5B4D;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.contact{
+    color: #4B3A2F;
+    font-weight: 400;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    font-size: 18px;
+  
+}
+.contact p{
+    margin-top: 10px;
+    line-height: 1.3;
+    color: #6B5B4D;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.footer-data .foot{
+    width: 100%;
+    height: 60px;
+    margin-top: 50px;
+    border-top: 2px solid white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    font-weight: 500;
+    color: #6B5B4D;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+
+}
+
+
+
+.footer-data .foot .reserve-btn{
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    width: 270px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: #764b30;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.footer-data .foot .reserve-btn a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.footer-data .foot i{
+    padding-right: 10px;
+}
+
+.footer-data .foot .reserve-btn:hover{
+    background-color: #8a5d48;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .footer-data {
+        height: auto;
+        padding-bottom: 0px; /* sticky btn ke liye neeche jagah */
+    }
+
+    .foot-information {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px 0;
+        text-align: center;
+    }
+
+    .footer-data .foot {
+        margin-top: 30px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: static; /* © line normal flow me rahegi */
+        border-top: 2px solid white;
+        flex-direction: column;
+    }
+
+    .footer-data .foot .reserve-btn {
+        position: sticky; /* sirf btn sticky hoga */
+        bottom: 0;        /* screen ke bottom se chipakega */
+        width: 100%;
+        border-radius: 0;
+        right: auto;
+        background-color: rgb(204, 122, 21);
+        z-index: 10;      /* upar na aaye iske liye */
+    }
+}
